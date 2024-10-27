@@ -18,6 +18,7 @@ module.exports = {
     'linebreak-style': 'off',
     'eol-last': 0,
     'require-jsdoc': 'off',
+    // eslint-disable-next-line quote-props
     semi: 'off',
   },
 };

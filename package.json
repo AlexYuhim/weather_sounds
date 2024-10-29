@@ -12,7 +12,6 @@
   "browserslist": "> 0.25%, not dead",
   "author": "yuhim",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
@@ -36,5 +35,6 @@
     "core-js": "^3.9.0",
     "eslint": "^8.57.0",
     "regenerator-runtime": "^0.14.1"
-  }
+  },
+  "description": ""
 }

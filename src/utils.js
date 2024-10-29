@@ -1,17 +1,17 @@
 export const dataTreks = [
   {
-    icons: './icons/sun.svg',
-    background: './img/summer-bg.jpg',
-    trek: './sounds/summer.mp3',
+    icons: '/assets/icons/sun.svg',
+    background: 'assets/img/summer-bg.jpg',
+    trek: 'assets/sounds/summer.mp3',
   },
   {
-    icons: './icons/cloud-rain.svg',
-    background: './img/rainy-bg.jpg',
-    trek: './sounds/rain.mp3',
+    icons: './assets/icons/cloud-rain.svg',
+    background: './assets/img/rainy-bg.jpg',
+    trek: './assets/sounds/rain.mp3',
   },
   {
-    icons: './icons/cloud-rain.svg',
-    background: './img/winter-bg.jpg',
-    trek: './sounds/winter.mp3',
+    icons: './assets/icons/cloud-rain.svg',
+    background: './assets/img/winter-bg.jpg',
+    trek: './assets/sounds/winter.mp3',
   },
 ];

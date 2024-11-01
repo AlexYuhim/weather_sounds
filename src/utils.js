@@ -1,17 +1,27 @@
-export const dataTreks = [
-  {
-    icons: '/assets/icons/sun.svg',
-    background: 'assets/img/summer-bg.jpg',
-    trek: 'assets/sounds/summer.mp3',
-  },
-  {
-    icons: './assets/icons/cloud-rain.svg',
-    background: './assets/img/rainy-bg.jpg',
-    trek: './assets/sounds/rain.mp3',
-  },
-  {
-    icons: './assets/icons/cloud-rain.svg',
-    background: './assets/img/winter-bg.jpg',
-    trek: './assets/sounds/winter.mp3',
-  },
-];
+export function setText(el, text) {
+  return (el.innerHTML = text);
+}
+
+export function createEL(tagName, classes = '') {
+  const el = document.createElement(tagName);
+  if (classes) {
+    el.classList.add(classes);
+  }
+  return el;
+}
+
+export function playTrack(audioTrack, playButton, currentTrack) {
+  if (audioTrack.paused) {
+    setText(playButton, 'pause');
+    audioTrack.play();
+  } else {
+    setText(playButton, 'play');
+    audioTrack.pause();
+  }
+}
+
+export function stopAllTrack(allTracks) {
+  allTracks.forEach((el) => {
+    console.log(el.pause());
+  });
+}

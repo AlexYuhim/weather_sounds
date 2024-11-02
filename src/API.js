@@ -1,6 +1,5 @@
 export const dataTreks = [
   {
-    dataAction: 'sun',
     icons: './assets/icons/sun.svg',
     background: './assets/img/summer-bg.jpg',
     trek: './assets/sounds/summer.mp3',

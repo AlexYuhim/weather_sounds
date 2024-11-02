@@ -10,12 +10,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container {
-  height: 50vh;
-  width: 10%;
-  color: #fff;
-}
-.wr-track {
+
+.box-track {
   width: 100px;
   height: 100px;
   flex-direction: column;
@@ -27,11 +23,20 @@ body {
   background-size: 100% 100%;
 }
 
-.container {
+.blockTracks {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.blur {
+  border: 1px solid #fff;
   width: 700px;
   height: 500px;
-  border: 1px solid;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
 }

@@ -10,7 +10,7 @@ export function createEL(tagName, classes = '') {
   return el;
 }
 
-export function playTrack(audioTrack, playButton, currentTrack) {
+export function playTrack(audioTrack, playButton) {
   if (audioTrack.paused) {
     setText(playButton, 'pause');
     audioTrack.play();
@@ -20,8 +20,15 @@ export function playTrack(audioTrack, playButton, currentTrack) {
   }
 }
 
-export function stopAllTrack(allTracks) {
+export function stopAllTrack(allTracks, allBtn) {
   allTracks.forEach((el) => {
-    console.log(el.pause());
+    el.pause();
   });
+  allBtn.forEach((el) => {
+    setText(el, 'play');
+  });
+}
+
+export function setAttributes(el, attrs = {}) {
+  el = Object.keys(attrs).map((key) => el.setAttribute(key, attrs[key]));
 }

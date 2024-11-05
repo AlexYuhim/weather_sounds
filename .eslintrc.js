@@ -22,5 +22,6 @@ module.exports = {
     // eslint-disable-next-line quote-props
     semi: 'off',
     'space-before-function-paren': 'off',
+    camelcase: 'off',
   },
 };

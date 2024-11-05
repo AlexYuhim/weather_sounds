@@ -10,8 +10,33 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container {
-  height: 50vh;
-  width: 10%;
-  color: #fff;
+
+.box-track {
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  background-size: 100% 100%;
+}
+
+.blockTracks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.blur {
+  border: 1px solid #fff;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
 }

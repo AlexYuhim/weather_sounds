@@ -19,6 +19,10 @@ module.exports = (env, argv) => {
             from: path.resolve(__dirname, 'publick/favicon.ico'),
             to: path.resolve(__dirname, 'dist'),
           },
+          {
+            from: path.resolve(__dirname, 'publick/assets/'),
+            to: path.resolve(__dirname, 'dist/assets/'),
+          },
         ],
       }),
       new HtmlWebpackPlugin({

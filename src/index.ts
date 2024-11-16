@@ -36,18 +36,19 @@ blockValue.append(volumeControl);
 blockBlur.append(blockValue);
 
 dataTreks.forEach((el) => {
-  const { id, icons, background, trek } = el;
+  const { id, icon, background, track } = el;
   const audioBox = createEL('figure', 'box-track', `${id}`);
   audioBox.style.backgroundImage = `url(${background})`;
 
   const audioIcons = <HTMLImageElement>createEL('img');
-  audioIcons.src = icons;
+  audioIcons.src = icon;
 
   const playButton = createEL('button');
   setText(playButton, 'play');
 
   const audioTrack = <HTMLAudioElement>createEL('audio');
-  audioTrack.src = trek;
+  audioTrack.src = track;
+  audioTrack.loop = true;
 
   volumeControl.addEventListener('input', function () {
     audioTrack.volume = Number(volumeControl.value);

@@ -7,6 +7,7 @@ import {
   stopAllTrack,
   setAttributes,
 } from './utils';
+import { AtrVolume } from './types/AtrVolume';
 
 const root = <HTMLElement>document.getElementById('app');
 
@@ -15,13 +16,7 @@ root.append(blockBlur);
 const blockTrack = createEL('div', 'blockTracks');
 const blockValue = createEL('div', 'blockVolume');
 const volumeControl = <HTMLInputElement>createEL('input');
-const attrVolumInput: {
-  type: string;
-  min: number;
-  step: string;
-  max: number;
-  value: number;
-} = {
+const attrVolumInput: AtrVolume = {
   type: 'range',
   min: 0,
   step: 'any',

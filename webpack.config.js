@@ -42,14 +42,14 @@ module.exports = (env, argv) => {
 
   return {
     context: path.resolve(__dirname, 'src'),
-    entry: './index.js',
+    entry: './index.ts',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: filename('js'),
       clean: true,
     },
     resolve: {
-      extensions: ['.js'],
+      extensions: ['.js', '.ts'],
       alias: {
         '@': path.resolve(__dirname, 'src'),
         '@core': path.resolve(__dirname, 'src', 'core'),
@@ -66,6 +66,11 @@ module.exports = (env, argv) => {
     plugins: plugins(),
     module: {
       rules: [
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
         {
           test: /\.s[ac]ss$/i,
           use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],

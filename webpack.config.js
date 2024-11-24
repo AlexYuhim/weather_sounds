@@ -16,17 +16,17 @@ module.exports = (env, argv) => {
       new CopyPlugin({
         patterns: [
           {
-            from: path.resolve(__dirname, 'publick/favicon.ico'),
+            from: path.resolve(__dirname, 'public/favicon.ico'),
             to: path.resolve(__dirname, 'dist'),
           },
           {
-            from: path.resolve(__dirname, 'publick/assets/'),
+            from: path.resolve(__dirname, 'public/assets/'),
             to: path.resolve(__dirname, 'dist/assets/'),
           },
         ],
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'publick/index.html'),
+        template: path.resolve(__dirname, 'public/index.html'),
       }),
 
       new MiniCssExtractPlugin({
